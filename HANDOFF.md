@@ -6,7 +6,7 @@ Next session: **keep fixing and polishing mockup 19.** The direction is accepted
 - NESS Studio (Karin Rubin, websites; Isabella, brand photography; Makawao, Maui). The site is a scroll-driven cinematic film.
 - The film runs: Hero → About → Bridge G ("In Register") → **Offers**.
 - Hero, About and Bridge G are **approved and must stay untouched.**
-- Repo: `karinrub/nessRedesign-`, branch `claude/barbed-wire-mockup-redesign-k5snad`. This is sandbox work only; never touch the production NESS_Studio repo.
+- Repo: `karinrub/nessRedesign-` (note the trailing dash). Original work branch `claude/barbed-wire-mockup-redesign-k5snad`; migration branch `claude/dreamy-thompson-axxys6` (identical content, plus this note). There is no `main` branch. This is sandbox work only; never touch the production NESS_Studio repo.
 
 ## Files
 | File | What it is |
@@ -74,3 +74,9 @@ Next session: **keep fixing and polishing mockup 19.** The direction is accepted
 ## Environment notes
 - The network policy blocks most of the web: Awwwards, Sleep Well, Codrops and others return 403, and WebFetch can't resolve hosts. Web search works. To browse references, add those hosts under Allowed domains in the environment's network settings.
 - Playwright for Node is at `/opt/node-tools/node_modules/playwright`, and Chromium is at `/opt/pw-browsers`. There is no Python Playwright.
+
+## Migration to local Mac (2026-10-17)
+- Moved from the cloud session to a local Claude Code session. Nothing was lost: every file, including rejected concepts 17 and the early mockup, is committed.
+- Clone the repo and check out `claude/dreamy-thompson-axxys6`. Open `19NESS-Offers-Elevation-Tower.html` directly in Chrome (no build or server needed); append `?v=7.3` or `?v=13.3` to jump to a position.
+- The cloud-only paths in this file do not apply locally. `shot3.mjs` reads Playwright from `$PW` (default `/opt/node-tools/node_modules/playwright`): on a Mac set `PW` to a local `playwright` install, e.g. `npm i playwright` in a scratch dir and `PW=<dir>/node_modules/playwright`. `contact_sheet.py` needs Pillow.
+- On a real GPU, drop the software-GL flags in `shot3.mjs` if you want hardware rendering. Polish item 1 (verify motion on a real GPU) can now be done locally in Chrome.
