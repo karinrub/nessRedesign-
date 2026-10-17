@@ -1271,7 +1271,7 @@ window.NG_EXT = (() => {
     { q: ST.svc[1], th: 180, ph: 0, r: R0, ty: 0, bump: 6, rb: -.1 },
     { q: ST.svc[2], th: 240, ph: 0, r: R0, ty: 0, bump: 24, rb: .2 },
     { q: ST.svc[3], th: 300, ph: 0, r: R0, ty: 0, bump: -10, rb: .1 },
-    { q: ST.plan, th: 360, ph: 89.4, r: 3900, ty: TH / 2, bump: 0, rb: .12 }
+    { q: ST.plan, th: 360, ph: 89.4, r: 3200, ty: TH / 2, bump: 0, rb: .12 }
   ];
   let A = null, K0 = null, T = null, G3 = null, R = {}, X = { els: [] }, q = 0, ready = false;
 
@@ -1352,7 +1352,7 @@ window.NG_EXT = (() => {
     key.shadow.mapSize.set(2048, 2048); key.shadow.camera.left = -2600; key.shadow.camera.right = 2600; key.shadow.camera.top = 2600; key.shadow.camera.bottom = -2600;
     key.shadow.camera.near = 100; key.shadow.camera.far = 12000; key.shadow.bias = -.0004; key.shadow.normalBias = 1.5; key.shadow.radius = 6;
     scene.add(key, key.target);
-    const lamp = new T.PointLight(RED, 0, 1400, 1.6); scene.add(lamp);
+    const lamp = new T.PointLight(RED, 0, 1250, 1.8); scene.add(lamp);
     G3 = { renderer, scene, camera, amb, key, lamp };
   }
 
@@ -1437,7 +1437,7 @@ window.NG_EXT = (() => {
     X.labels = [['What you can hire us for.', 1, 30], ['Websites', 2, 38], ['Photography', 3, 38], ['Rebuilds', 4, 38], ['Care', 5, 38]].map(([txt, side, px], i) => {
       const t = textTex([txt], px, 700, -.045, 1), m = word(t, side === 5 ? RED : CREAM, side === 5 ? RED_S : CREAM_S, 0);
       const th = side * 60 * DEG, out = new T.Vector3(Math.sin(th), 0, Math.cos(th)), tan = new T.Vector3(Math.cos(th), 0, -Math.sin(th));
-      let up = out.clone(), x = tan.clone();
+      let up = out.clone(), x = tan.clone().negate();                       /* right-handed: x × up = world up, so the face looks at the sky */
       if (up.dot(screenUp) < -.01) { up.negate(); x.negate(); }               /* never upside down from above */
       const qt = new T.Quaternion().setFromRotationMatrix(new T.Matrix4().makeBasis(x, up, new T.Vector3(0, 1, 0)));
       const wpx = t.h * upp, p = new T.Vector3(0, gy, 0).addScaledVector(out, APO + 26 * upp + wpx / 2);
@@ -1445,6 +1445,7 @@ window.NG_EXT = (() => {
       return { m, p, s: upp, i };
     });
     X.linkAt = new T.Vector3(0, gy, APO + 60 * upp);
+    X.els.forEach(e => { e.side = SIDE[e.scene]; e.core = new T.Vector3(0, e.obj.position.y * .2, 0); });
     X.built = true;
   }
 
@@ -1497,7 +1498,7 @@ window.NG_EXT = (() => {
     G3.amb.intensity = .55 * PI * (1 - .55 * night); G3.key.intensity = .45 * PI * Math.hypot(.36, .48, 1) * (1 - .62 * night);
     const sw = prog(qq, ST.svc[3] - .16, ST.svc[3] - .02), on = sw < .3 ? sw / .3 * .5 : sw < .5 ? .15 : sw < .75 ? .7 : 1;
     const le = X.els.find(e => e.light);
-    if (le) { G3.lamp.position.copy(le.obj.position).add(new T.Vector3(0, 0, 0)); G3.lamp.intensity = 5.5e5 * on * (1 - ss(qq, ST.svc[3] + .3, ST.svc[3] + .6)); }
+    if (le) { G3.lamp.position.copy(le.obj.position).add(new T.Vector3(0, 0, 0)); G3.lamp.intensity = 3e5 * on * (1 - ss(qq, ST.svc[3] + .3, ST.svc[3] + .6)); }
     /* plan labels: they slide out from under the cap's edges as the camera reaches the top */
     X.labels.forEach(l => {
       const u = eo(prog(qq, ST.plan - .42 + l.i * .05, ST.plan - .08 + l.i * .02));
