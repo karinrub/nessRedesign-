@@ -1,0 +1,11 @@
+/* 24B — a day on maui: sky above a fixed horizon (62% down); the type lives under the horizon, on the ground */
+.b-head{position:absolute;left:5vw;top:16vh;margin:0;width:62vw;font-weight:700;font-size:8.2vw;letter-spacing:-.055em;line-height:.9;visibility:hidden}
+.b-blk{position:absolute;left:5vw;right:5vw;top:67vh;display:grid;grid-template-columns:1fr min(36vw,520px);column-gap:4vw;align-items:start;visibility:hidden}
+.b-blk .nm{margin:0;font-weight:700;font-size:6.4vw;letter-spacing:-.055em;line-height:.9;white-space:nowrap}
+.b-blk p{margin:.35em 0 0;font-size:clamp(17px,1.36vw,20px);line-height:1.5;letter-spacing:-.005em;text-wrap:pretty}
+.b-tag{position:absolute;left:0;top:0;padding-top:18px;white-space:nowrap;font-weight:600;font-size:clamp(17px,1.3vw,20px);letter-spacing:-.02em;visibility:hidden}
+.b-end{position:absolute;left:50%;top:68vh;text-align:center;visibility:hidden}
+.b-layer .b-cta{display:block;font-weight:700;font-size:6.6vw;letter-spacing:-.055em;line-height:.92;color:#e9e1ce;text-decoration:none;white-space:nowrap;transition:color 200ms ease}
+@media (hover:hover) and (pointer:fine){.b-layer .b-end.is-on .b-cta:hover{color:#fff}}
+.b-mail{margin:1em 0 0;font-weight:500;font-size:clamp(17px,1.36vw,20px)}
+.b-layer .b-mail a{color:#e9e1ce;text-decoration:underline;text-decoration-color:#c0230b;text-decoration-thickness:.09em;text-underline-offset:.24em}

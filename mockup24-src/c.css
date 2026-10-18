@@ -1,0 +1,13 @@
+/* 24C — the wave: names set big over the sea along the bottom, the paragraph high on the right */
+.c-head{position:absolute;left:5vw;top:13vh;margin:0;width:70vw;font-weight:700;font-size:8.4vw;letter-spacing:-.055em;line-height:.9;visibility:hidden}
+.c-blk{position:absolute;inset:0;visibility:hidden}
+.c-blk .nm{position:absolute;left:4.5vw;bottom:5vh;margin:0;font-weight:700;font-size:11.5vw;letter-spacing:-.06em;line-height:.86;white-space:nowrap}
+.c-blk p{position:absolute;right:5vw;top:12vh;width:min(30vw,440px);margin:0;font-size:clamp(17px,1.36vw,20px);line-height:1.5;letter-spacing:-.005em;text-wrap:pretty}
+.c-blk--photo .nm{bottom:auto;top:9vh}
+.c-blk--photo p{top:auto;bottom:10vh;right:auto;left:5vw}
+.c-blk--care .nm{color:#c0230b}
+.c-end{position:absolute;left:5vw;top:13vh;visibility:hidden}
+.b-layer .c-cta{display:block;width:52vw;font-weight:700;font-size:7.4vw;letter-spacing:-.055em;line-height:.9;color:#e9e1ce;text-decoration:none;transition:color 200ms ease}
+@media (hover:hover) and (pointer:fine){.b-layer .c-end.is-on .c-cta:hover{color:#fff}}
+.c-mail{margin:1.1em 0 0;font-weight:500;font-size:clamp(17px,1.36vw,20px)}
+.b-layer .c-mail a{color:#e9e1ce;text-decoration:underline;text-decoration-color:#c0230b;text-decoration-thickness:.09em;text-underline-offset:.24em}

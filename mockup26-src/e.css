@@ -1,0 +1,18 @@
+/* 26 — the strand works: type is composed with each sculpture; names are big and flat, paragraphs sit in protected sky */
+.e-head{position:absolute;left:4.2vw;top:11vh;margin:0;width:62vw;font-weight:700;font-size:7.6vw;letter-spacing:-.055em;line-height:.9;visibility:hidden}
+.e-blk{position:absolute;inset:0;visibility:hidden}
+.e-blk .nm{position:absolute;margin:0;font-weight:700;font-size:11vw;letter-spacing:-.06em;line-height:.86;white-space:nowrap}
+.e-blk p{position:absolute;margin:0;width:min(28vw,430px);font-size:clamp(17px,1.34vw,20px);line-height:1.5;letter-spacing:-.005em;text-wrap:pretty}
+.e-blk--web .nm{left:4.2vw;top:9vh}
+.e-blk--web p{left:4.4vw;top:27vh}
+.e-blk--photo .nm{left:4.2vw;bottom:7vh;font-size:9.4vw}
+.e-blk--photo p{left:4.4vw;top:11vh}
+.e-blk--reb .nm{left:4.2vw;top:9vh}
+.e-blk--reb p{left:4.4vw;top:27vh}
+.e-blk--care .nm{right:4.2vw;top:9vh;color:#c0230b}
+.e-blk--care p{right:4.6vw;top:27vh}
+.e-end{position:absolute;left:4.5vw;top:11vh;visibility:hidden}
+.b-layer .e-cta{display:block;width:46vw;font-weight:700;font-size:6.6vw;letter-spacing:-.055em;line-height:.9;color:#e9e1ce;text-decoration:none;transition:color 200ms ease}
+@media (hover:hover) and (pointer:fine){.b-layer .e-end.is-on .e-cta:hover{color:#fff}}
+.e-mail{margin:1.1em 0 0;font-weight:500;font-size:clamp(17px,1.36vw,20px)}
+.b-layer .e-mail a{color:#e9e1ce;text-decoration:underline;text-decoration-color:#c0230b;text-decoration-thickness:.09em;text-underline-offset:.24em}

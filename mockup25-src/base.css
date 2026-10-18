@@ -1,0 +1,8 @@
+/* 24 — shared plumbing: the steel canvas, grain, the layer the type sits in */
+.d-gl{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;opacity:0}
+.d-grain{position:absolute;inset:0;pointer-events:none;opacity:.045;background-size:180px 180px;mix-blend-mode:screen}
+.d-hud{position:absolute;inset:0;pointer-events:none;font-family:'Instrument Sans',sans-serif;color:#e9e1ce;-webkit-font-smoothing:antialiased;visibility:hidden}
+.d-hud section,.d-hud [id]{will-change:transform,opacity}
+.d-hud a{pointer-events:none}
+.d-hud .is-on a{pointer-events:auto}
+.d-hud a:focus-visible{outline:2px solid #c0230b;outline-offset:8px}

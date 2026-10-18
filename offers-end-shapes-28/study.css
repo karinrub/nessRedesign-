@@ -1,0 +1,22 @@
+:root{color-scheme:dark;--ink:#17150f;--cream:#e9e1ce;--red:#c0230b}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;min-height:100%;background:var(--ink)}
+body{font-family:'Instrument Sans',sans-serif;color:var(--cream);-webkit-font-smoothing:antialiased}
+.stage{position:relative;width:100%;height:100svh;min-height:560px;overflow:hidden;background:var(--ink)}
+.gl,.grain{position:absolute;inset:0;width:100%;height:100%;display:block}
+.gl{z-index:1;opacity:0;transition:opacity .38s ease}
+html[data-ready="1"] .gl{opacity:1}
+.grain{z-index:2;pointer-events:none;opacity:.075;background-size:128px;mix-blend-mode:screen}
+.copy{position:absolute;z-index:3;top:12.8%;left:5%;pointer-events:none}
+h1{margin:0;font-size:clamp(60px,7.45vw,126px);font-weight:700;line-height:.91;letter-spacing:-.062em}
+.email{display:inline-block;margin-top:1.13em;color:var(--cream);font-size:clamp(17px,1.36vw,21px);font-weight:500;line-height:1.2;text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:.09em;text-underline-offset:.24em;pointer-events:auto}
+.red-disc{position:absolute;z-index:0;width:clamp(54px,6.5vw,112px);aspect-ratio:1;border-radius:50%;background:var(--red);left:var(--disc-x,73%);top:var(--disc-y,65%);transform:translate(-50%,-50%);transition:left .42s ease,top .42s ease}
+.study-bar{position:absolute;z-index:4;bottom:0;left:0;right:0;min-height:78px;padding:14px 5%;display:flex;align-items:center;gap:28px;background:linear-gradient(transparent,#17150ff5 22%);font-size:11px;letter-spacing:.08em}
+.study-label{min-width:145px;opacity:.68}
+.choices{display:flex;gap:clamp(10px,2.5vw,42px)}
+.choices button{appearance:none;border:0;border-bottom:1px solid transparent;background:none;color:var(--cream);padding:12px 0 10px;font:500 clamp(12px,1.08vw,17px) 'Instrument Sans',sans-serif;letter-spacing:0;cursor:pointer;opacity:.58;transition:opacity .2s,border-color .2s}
+.choices button:hover,.choices button[aria-pressed="true"]{opacity:1;border-color:var(--red)}
+.choices button span{font-size:.65em;vertical-align:top;margin-right:.35em;color:var(--red)}
+.choices button:focus-visible,.email:focus-visible{outline:2px solid var(--red);outline-offset:5px}
+.study-count{margin-left:auto;opacity:.68;white-space:nowrap}
+@media(max-width:700px){.stage{min-height:540px}.copy{top:11%;left:6%}h1{font-size:clamp(54px,11vw,82px)}.email{font-size:15px}.study-bar{padding:14px 6%;gap:10px;min-height:110px;flex-wrap:wrap}.study-label{width:100%;font-size:9px}.choices{gap:18px}.choices button{font-size:12px}.study-count{font-size:9px}}

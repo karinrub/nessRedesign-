@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17150f">
+  <link rel="icon" href="data:,">
+  <title>NESS — Offers film studies</title>
+  <link rel="stylesheet" href="../wave-studies-25/lib/fonts.css">
+  <link rel="stylesheet" href="./study.css">
+  <script type="importmap">{"imports":{"three":"../wave-studies-25/lib/three.js","ness-three-core":"../wave-studies-25/lib/ness-three-core.js","ness-wire-model":"../wave-studies-25/lib/ness-wire-model.js"}}</script>
+</head>
+<body>
+  <main class="viewer" data-film="key" data-scene="0">
+    <section class="frame" aria-label="Offers motion study">
+      <canvas class="gl" aria-hidden="true"></canvas>
+      <div class="grain" aria-hidden="true"></div>
+      <div class="focus-disc" aria-hidden="true"><span>made for you</span></div>
+      <div class="copy" aria-live="polite">
+        <p class="offer-name"></p>
+        <p class="passage"></p>
+        <a class="email" href="mailto:hello@nessmaui.com">hello@nessmaui.com</a>
+      </div>
+      <div class="frame-number" aria-hidden="true"><span class="current-beat">01</span><span class="divider"></span><span>08</span></div>
+      <div class="scroll-hint" aria-hidden="true">SCROLL TO CONTINUE <span></span></div>
+    </section>
+    <nav class="study-controls" aria-label="Film study controls">
+      <div class="film-switch" aria-label="Choose a film direction">
+        <button type="button" data-film-choice="key" aria-pressed="true"><small>01</small> The Key</button>
+        <button type="button" data-film-choice="signet" aria-pressed="false"><small>02</small> The Signet</button>
+        <button type="button" data-film-choice="wayfinder" aria-pressed="false"><small>03</small> The Wayfinder</button>
+      </div>
+      <div class="transport" aria-label="Scene navigation">
+        <button type="button" class="previous" aria-label="Previous scene"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+        <span class="transport-label">WEBSITES · 1 / 2</span>
+        <button type="button" class="next" aria-label="Next scene"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+      </div>
+    </nav>
+  </main>
+  <script type="module" src="./study.js"></script>
+</body>
+</html>

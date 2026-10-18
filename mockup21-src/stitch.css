@@ -1,0 +1,32 @@
+/* 21 — the stitch (all type flat; the steel thread is the only 3D object) */
+.sw-gl{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;opacity:0}
+.sw-grain{position:absolute;inset:0;pointer-events:none;opacity:.045;background-size:180px 180px;mix-blend-mode:screen}
+.sw-hud{position:absolute;inset:0;pointer-events:none;font-family:'Instrument Sans',sans-serif;color:#e9e1ce;-webkit-font-smoothing:antialiased;visibility:hidden}
+.sw-page{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
+.sw-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* the heading, split by the steel: one line rises out of it, the other drops out of it */
+.sw-head{width:92vw;height:100vh;font-weight:700;font-size:12.6vw;letter-spacing:-.055em;line-height:.92;white-space:nowrap}
+.sw-mask{position:absolute;left:0;overflow:hidden;padding:0 .04em}
+.sw-mask>span{display:block;will-change:transform}
+.sw-mask--up{bottom:calc(50vh + 18px);padding-bottom:.02em}
+.sw-mask--down{top:calc(50vh + 16px);padding-bottom:.16em}
+
+/* paragraphs: printed beside their stitch, arriving word by word at the stop */
+.sw-blk{visibility:hidden}
+.sw-p{width:min(31vw,460px);font-weight:400;font-size:clamp(17px,1.36vw,20px);line-height:1.5;letter-spacing:-.005em;color:#e9e1ce;text-wrap:pretty}
+
+/* the last sentence is the link; its full stop is the red point the thread leaves through */
+.b-layer .sw-end{display:block;font-weight:700;font-size:15vw;letter-spacing:-.06em;line-height:.86;color:#e9e1ce;text-decoration:none;white-space:nowrap;transition:color 200ms ease}
+.sw-end>span{display:block}
+.sw-dot{display:inline-block;width:.2em;height:.2em;margin-left:.03em;vertical-align:baseline;visibility:hidden}
+.b-layer .sw-end.is-on{pointer-events:auto}
+@media (hover:hover) and (pointer:fine){.b-layer .sw-end.is-on:hover{color:#fff}}
+.sw-end:focus-visible{outline:2px solid #c0230b;outline-offset:8px}
+
+/* the chapter rail: which stop the film is resting on */
+.sw-rail{position:absolute;right:5vw;top:6vh;display:flex;gap:1.6em;margin:0;padding:0;list-style:none;font-weight:500;font-size:15px;line-height:1;color:#e9e1ce;visibility:hidden}
+.sw-rail li{opacity:.38;transition:opacity 300ms ease}
+.sw-rail li.is-on{opacity:1}
+.sw-rail li.is-on::before{content:'';display:inline-block;width:.42em;height:.42em;border-radius:50%;background:#c0230b;margin-right:.5em;vertical-align:.1em}
+@media (prefers-reduced-motion:reduce){.sw-rail li{transition:none}}

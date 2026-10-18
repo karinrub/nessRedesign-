@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="icon" href="data:,"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NESS Wave study A, motion proof</title>
+<link rel="stylesheet" href="../lib/fonts.css">
+<style>
+html,body{margin:0;background:#17150f}
+body{height:700vh}
+canvas.gl{position:fixed;inset:0;width:100vw;height:100vh;display:block}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.045;mix-blend-mode:screen;background-size:180px 180px}
+.label{position:fixed;left:4.5vw;top:8vh;margin:0;font:700 11vw/.9 'Instrument Sans',sans-serif;letter-spacing:-.06em;color:#e9e1ce;opacity:0;pointer-events:none}
+</style>
+<script type="importmap">{"imports":{"three":"../lib/three.js","ness-three-core":"../lib/ness-three-core.js","ness-wire-model":"../lib/ness-wire-model.js"}}</script>
+</head><body>
+<canvas class="gl" aria-label="One barbed wire forms a wave as you scroll"></canvas><div class="grain" aria-hidden="true"></div>
+<p class="label" aria-live="polite"></p>
+<script>{const c=document.createElement('canvas');c.width=c.height=180;const x=c.getContext('2d'),d=x.createImageData(180,180);for(let i=0;i<d.data.length;i+=4){const v=Math.random()*255;d.data[i]=d.data[i+1]=d.data[i+2]=v;d.data[i+3]=255}x.putImageData(d,0,0);document.querySelector('.grain').style.backgroundImage=`url(${c.toDataURL()})`}</script>
+<script type="module" src="a-motion.js"></script>
+</body></html>

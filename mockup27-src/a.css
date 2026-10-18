@@ -1,0 +1,12 @@
+/* 24A — balance: a left column of type, the mobile cascading down the right */
+.a-head{position:absolute;left:5vw;top:24vh;margin:0;font-weight:700;font-size:7.8vw;letter-spacing:-.055em;line-height:.9;visibility:hidden}
+.a-head span{display:block}
+.a-blk{position:absolute;left:5vw;top:15vh;width:34vw;visibility:hidden}
+.a-blk .nm{margin:0 0 .5em;font-weight:700;font-size:6.6vw;letter-spacing:-.055em;line-height:.9;white-space:nowrap}
+.a-blk p{width:min(30vw,440px);margin:0;font-size:clamp(17px,1.36vw,20px);line-height:1.5;letter-spacing:-.005em;text-wrap:pretty}
+.a-blk--care .nm{color:#c0230b}
+.a-end{position:absolute;left:5vw;bottom:12vh;visibility:hidden}
+.b-layer .a-cta{display:block;font-weight:700;font-size:6.4vw;letter-spacing:-.055em;line-height:.92;color:#e9e1ce;text-decoration:none;width:44vw;transition:color 200ms ease}
+@media (hover:hover) and (pointer:fine){.b-layer .a-end.is-on .a-cta:hover{color:#fff}}
+.a-mail{margin:1.2em 0 0;font-weight:500;font-size:clamp(17px,1.36vw,20px)}
+.b-layer .a-mail a{color:#e9e1ce;text-decoration:underline;text-decoration-color:#c0230b;text-decoration-thickness:.09em;text-underline-offset:.24em}

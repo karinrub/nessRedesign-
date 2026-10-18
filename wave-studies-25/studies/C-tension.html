@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="icon" href="data:,"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NESS Wave study C, Tension</title>
+<link rel="stylesheet" href="../lib/fonts.css">
+<style>
+html,body{margin:0;height:100%;background:#17150f;overflow:hidden}
+canvas.gl{position:fixed;inset:0;width:100vw;height:100vh;display:block}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.045;mix-blend-mode:screen;background-size:180px 180px}
+</style>
+<script type="importmap">{"imports":{"three":"../lib/three.js","ness-three-core":"../lib/ness-three-core.js","ness-wire-model":"../lib/ness-wire-model.js"}}</script>
+</head><body>
+<canvas class="gl" aria-label="Barbed wire strung between two rails twists into a breaking wave"></canvas><div class="grain" aria-hidden="true"></div>
+<script>{const c=document.createElement('canvas');c.width=c.height=180;const x=c.getContext('2d'),d=x.createImageData(180,180);for(let i=0;i<d.data.length;i+=4){const v=Math.random()*255;d.data[i]=d.data[i+1]=d.data[i+2]=v;d.data[i+3]=255}x.putImageData(d,0,0);document.querySelector('.grain').style.backgroundImage=`url(${c.toDataURL()})`}</script>
+<script type="module" src="c-tension.js"></script>
+</body></html>

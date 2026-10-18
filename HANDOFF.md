@@ -1,5 +1,8 @@
 # NESS handoff, 2026-10-17: Offers mockup 19, "Elevation: The Tower"
 
+> **2026-10-18: the approved Offers direction is 24C, The Wave. Start from `HANDOFF-24C-THE-WAVE.md`.** This file is background and history.
+
+
 Next session: **keep fixing and polishing mockup 19.** The direction is accepted for development, but it is not approved yet.
 
 ## The project
@@ -74,6 +77,45 @@ Next session: **keep fixing and polishing mockup 19.** The direction is accepted
 ## Environment notes
 - The network policy blocks most of the web: Awwwards, Sleep Well, Codrops and others return 403, and WebFetch can't resolve hosts. Web search works. To browse references, add those hosts under Allowed domains in the environment's network settings.
 - Playwright for Node is at `/opt/node-tools/node_modules/playwright`, and Chromium is at `/opt/pw-browsers`. There is no Python Playwright.
+
+## Offers mockup 20, "The Line" (2026-10-17, work in progress, not approved)
+- File: `20NESS-Offers-The-Line.html`, built from 19 (untouched) by `python3 mockup20-src/build.py`. Edit `mockup20-src/line.ext.js` and `line.css`.
+- Direction from Karin: the barbed wire must have a real role; film-like stops that tell the reader when to read; **no 3D text** anywhere in Offers or at the end of the bridge. The wire is the only 3D object.
+- The wire is the hero's own model (`NWF.createSteelWire` and `createSteelStudio`), one instance of about 262 units, morphed between whole-wire shapes (lead, coil, knot, line, nest, ring) by a front that travels along it. Environment and lights ride with the camera, so it is always lit like the hero.
+- Script (q = p − 4.8):
+  - **2.55–3.9:** the period of "meet them." dissolves into the wire's cut end. The camera pushes in along the wire's axis while the flat sentence scales about the period (2D), then banks off-axis. The line runs on into the dark. Stop: the heading.
+  - **4.8, Websites:** the wire is wound, far end first, into an even coil.
+  - **5.7, Photography:** the camera swings onto the axis and the same coil becomes a lens around a red point.
+  - **6.6, Rebuilds:** the coil buckles into a tangle, then is pulled true with an overshoot.
+  - **7.5, Care:** night; the wire winds into a nest around the red point, which switches on as a lamp.
+  - **8.5, ending:** the nest unwinds into a ring that lands as the oversized full stop of "Tell us what you need".
+- Text appears only when the wire has settled and leaves before it moves again. A chapter rail (bottom right) marks the four service stops. Stops and scroll length are unchanged from 19.
+- QA: `mockup20-src/frames.mjs` (system Chrome, real GPU, one session) and `mockup20-src/storyboard.jpg`. Measured on an M4 Pro at DPR 2: median frame 8.3 ms, p99 9.3 ms, max 17.7 ms; re-forming the wire takes about 1 ms.
+
+## Offers mockup 21, "The Stitch" (2026-10-17, current candidate, not approved)
+- File: `21NESS-Offers-The-Stitch.html`, built from 19 by `python3 mockup21-src/build.py`. Mockups 19 and 20 are untouched.
+- Edit `mockup21-src/stitch.ext.js` and `stitch.css`. The script is in `mockup21-src/SCRIPT.md`; stills are in `mockup21-src/storyboard.jpg`.
+- The idea: the Bridge says people meet a business in pieces, and Offers joins the pieces. The page is an invisible surface (a depth-only plane at z = 0), and the hero's wire is a steel thread that stitches through it.
+- The camera always faces the page square and only tracks and dollies, so all type stays flat.
+- Entrance: the Bridge sentence collapses into one rule (2D, on the Bridge canvas), which becomes the steel and grows barbs. The heading emerges from both sides of it.
+- Services, one stitch each:
+  - **Websites:** an overcast stitch through the word.
+  - **Photography:** a lens cone that pulls into focus, then lies flat.
+  - **Rebuilds:** the split word is laced and pulled closed.
+  - **Care:** a knot with a red lamp, at night.
+- Ending: the camera pulls back to show the whole two-row poster. The thread leaves through the red full stop of "Tell us what you need".
+- Camera keys are page centre plus zoom, laid out in a 3 × 2 grid of viewport-sized cells. Stops and scroll length are unchanged.
+- Measured on an M4 Pro at DPR 2: median frame 8.3 ms, p99 9.3 ms, max 16.7 ms. Re-forming the thread takes about 3 ms. The Bridge to Offers handover differs only by antialiasing.
+
+## Offers mockups 22 and 23 (2026-10-17)
+- **22, "Point of View"** (`22NESS-Offers-Point-of-View.html`, source in `mockup22-src/`): an anamorphic sculpture whose four pieces line up into a ring only from one viewpoint.
+  - Superseded by 23, because Karin wants recognisable shapes and a final shape that is not a ring or a house.
+  - Known issue, left unfixed: the final approach overshoots the viewpoint.
+- **23, three directions** built from one source (`mockup23-src/line23.ext.js`, `line23.css`; `python3 mockup23-src/build.py` writes `23A/B/C NESS-Offers-*.html`).
+  - **Shared journey:** the Bridge's sentence collapses into a line, which becomes the hero wire. The one wire draws a square (Websites), a circle around the red point (Photography), a triangle pulled true (Rebuilds) and an infinity loop (Care) along that line, with a story light on the current shape. At 8.5 the whole is seen from above.
+  - **Endings:** A, The Line (at eye level the shapes fold edge-on into one mended wire, a rail for Packages); B, Three Lines (the wire is pulled into three parallel lines, one per package); C, The Full Stop (the wire winds into a ring around the red point, which opens into a red field).
+  - The script is in `mockup23-src/SCRIPT.md` and the stills in `mockup23-src/storyboard.jpg`. One extra stop (q 9.4, p 14.2), so the length is 9.7.
+  - Karin is choosing between A, B and C. The next section is Packages, and she does not want literal package shapes.
 
 ## Migration to local Mac (2026-10-17)
 - Moved from the cloud session to a local Claude Code session. Nothing was lost: every file, including rejected concepts 17 and the early mockup, is committed.

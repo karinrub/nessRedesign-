@@ -1,0 +1,12 @@
+/* 25 — the stroke: the heading in the sky over the flat line; names are drawn in the film (flat planes among the wire),
+   so the DOM names are kept for screen readers only; paragraphs sit in empty sky, never on the wire */
+.s-head{position:absolute;left:4.2vw;top:12vh;margin:0;width:62vw;font-weight:700;font-size:7.6vw;letter-spacing:-.055em;line-height:.9;visibility:hidden}
+.s-blk{position:absolute;inset:0;visibility:hidden}
+.s-blk .nm{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.s-blk p{position:absolute;right:5vw;top:13vh;width:min(28vw,440px);margin:0;font-size:clamp(17px,1.3vw,20px);line-height:1.5;letter-spacing:-.005em;text-wrap:pretty}
+.s-end{position:absolute;left:4.5vw;top:12vh;visibility:hidden}
+.b-layer .s-cta{display:block;width:60vw;font-weight:700;font-size:7.4vw;letter-spacing:-.055em;line-height:.9;color:#e9e1ce;text-decoration:none;transition:color 200ms ease}
+@media (hover:hover) and (pointer:fine){.b-layer .s-end.is-on .s-cta:hover{color:#fff}}
+.s-mail{margin:1.1em 0 0;font-weight:500;font-size:clamp(17px,1.36vw,20px)}
+.b-layer .s-mail a{color:#e9e1ce;text-decoration:underline;text-decoration-color:rgba(233,225,206,.45);text-decoration-thickness:.07em;text-underline-offset:.24em}
+.s-blk--photo p{right:auto;left:4.5vw;top:34vh;width:min(25vw,400px)}

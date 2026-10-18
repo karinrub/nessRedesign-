@@ -1,0 +1,42 @@
+/* 23 — one line, four shapes (all type flat; the barbed wire is the only 3D object) */
+.ln-gl{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;opacity:0}
+.ln-grain{position:absolute;inset:0;pointer-events:none;opacity:.045;background-size:180px 180px;mix-blend-mode:screen}
+.ln-field{position:absolute;inset:0;background:#c0230b;visibility:hidden;pointer-events:none;will-change:clip-path}
+.ln-hud{position:absolute;inset:0;pointer-events:none;font-family:'Instrument Sans',sans-serif;color:#e9e1ce;-webkit-font-smoothing:antialiased;visibility:hidden}
+.ln-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* the heading, split by the line it came out of */
+.ln-head{position:absolute;left:5vw;top:0;width:92vw;height:100vh;font-weight:700;font-size:10.6vw;letter-spacing:-.055em;line-height:.92;white-space:nowrap;visibility:hidden}
+.ln-mask{position:absolute;left:0;overflow:hidden;padding:0 .04em}
+.ln-mask>span{display:block;will-change:transform}
+.ln-mask--up{bottom:calc(50vh + 14px);padding-bottom:.02em}
+.ln-mask--down{top:calc(50vh + 12px);padding-bottom:.16em}
+/* the stops */
+.ln-blk{position:absolute;left:5vw;width:34vw;visibility:hidden;will-change:transform,opacity}
+.ln-name{font-weight:700;font-size:7.4vw;letter-spacing:-.055em;line-height:.9;white-space:nowrap;will-change:transform,opacity}
+.ln-p{width:min(31vw,460px);margin-top:1.1em;font-weight:400;font-size:clamp(17px,1.36vw,20px);line-height:1.5;letter-spacing:-.005em;text-wrap:pretty}
+.ln-blk--web{top:11vh}
+.ln-blk--photo{top:auto;bottom:9vh;display:flex;flex-direction:column-reverse}
+.ln-blk--photo .ln-p{margin:0 0 1.4em}
+.ln-blk--reb{top:11vh}
+.ln-blk--care{top:11vh}
+.ln-blk--care .ln-name{color:#c0230b}
+/* the endings */
+.ln-endblk{position:absolute;left:5vw;visibility:hidden;will-change:transform,opacity}
+.ln-endblk--A{top:16vh}
+.ln-endblk--B{top:9vh}
+.ln-endblk--C{top:30vh}
+.b-layer .ln-end{display:block;font-weight:700;font-size:7.6vw;letter-spacing:-.055em;line-height:.92;color:#e9e1ce;text-decoration:none;white-space:nowrap;pointer-events:none;transition:color 200ms ease}
+.ln-endblk--C .ln-end{font-size:9.4vw;white-space:normal;width:70vw}
+.b-layer .ln-endblk.is-on .ln-end,.b-layer .ln-endblk.is-on .ln-mail a{pointer-events:auto}
+@media (hover:hover) and (pointer:fine){.b-layer .ln-endblk.is-on .ln-end:hover{color:#fff}}
+.ln-mail{margin-top:1.2em;font-weight:500;font-size:clamp(17px,1.36vw,20px)}
+.b-layer .ln-mail a{color:#e9e1ce;text-decoration:underline;text-decoration-color:#c0230b;text-decoration-thickness:.09em;text-underline-offset:.24em;transition:color 180ms ease}
+.ln-endblk--C .ln-mail a{text-decoration-color:#e9e1ce}
+@media (hover:hover) and (pointer:fine){.b-layer .ln-mail a:hover{color:#c0230b}.b-layer .ln-endblk--C .ln-mail a:hover{color:#17150f}}
+.ln-end:focus-visible,.ln-mail a:focus-visible{outline:2px solid #c0230b;outline-offset:8px}
+/* the chapter rail */
+.ln-rail{position:absolute;right:5vw;top:6vh;display:flex;gap:1.6em;margin:0;padding:0;list-style:none;font-weight:500;font-size:15px;line-height:1;visibility:hidden}
+.ln-rail li{opacity:.38;transition:opacity 300ms ease}
+.ln-rail li.is-on{opacity:1}
+.ln-rail li.is-on::before{content:'';display:inline-block;width:.42em;height:.42em;border-radius:50%;background:#c0230b;margin-right:.5em;vertical-align:.1em}
+@media (prefers-reduced-motion:reduce){.ln-rail li{transition:none}}

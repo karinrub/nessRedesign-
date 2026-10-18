@@ -1,0 +1,27 @@
+/* 22 — point of view (all type flat; the barbed-wire sculpture is the only 3D object) */
+.pv-gl{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;opacity:0}
+.pv-grain{position:absolute;inset:0;pointer-events:none;opacity:.045;background-size:180px 180px;mix-blend-mode:screen}
+.pv-hud{position:absolute;inset:0;pointer-events:none;font-family:'Instrument Sans',sans-serif;color:#e9e1ce;-webkit-font-smoothing:antialiased;visibility:hidden}
+.pv-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.pv-blk{position:absolute;left:5vw;visibility:hidden;will-change:transform,opacity}
+.pv-p{width:min(31vw,460px);font-weight:400;font-size:clamp(17px,1.36vw,20px);line-height:1.5;letter-spacing:-.005em;color:#e9e1ce;text-wrap:pretty}
+.pv-blk--web{top:62vh}
+.pv-blk--photo{top:11vh}
+.pv-blk--reb{top:64vh}
+.pv-blk--care{top:58vh}
+/* the whole: the names, set lightly beside their pieces */
+.pv-tag{position:absolute;left:0;top:0;white-space:nowrap;font-weight:600;font-size:clamp(17px,1.3vw,20px);letter-spacing:-.02em;color:#e9e1ce;visibility:hidden;will-change:transform,opacity}
+/* the last frame: the steel sentence above is drawn in GL; this is its link */
+.b-layer .pv-end{position:absolute;left:5vw;top:36vh;width:52vw;height:20vw;pointer-events:none}
+.b-layer .pv-end.is-on{pointer-events:auto}
+.pv-end:focus-visible{outline:2px solid #c0230b;outline-offset:8px}
+.pv-mail{position:absolute;left:5vw;top:calc(36vh + 19.6vw);font-weight:500;font-size:clamp(17px,1.36vw,20px);visibility:hidden}
+.b-layer .pv-mail a{color:#e9e1ce;text-decoration:underline;text-decoration-color:#c0230b;text-decoration-thickness:.09em;text-underline-offset:.24em;pointer-events:auto;transition:color 180ms ease}
+@media (hover:hover) and (pointer:fine){.b-layer .pv-mail a:hover{color:#c0230b}}
+.pv-mail a:focus-visible{outline:2px solid #c0230b;outline-offset:6px}
+/* the chapter rail: which stop the film is resting on */
+.pv-rail{position:absolute;right:5vw;top:6vh;display:flex;gap:1.6em;margin:0;padding:0;list-style:none;font-weight:500;font-size:15px;line-height:1;color:#e9e1ce;visibility:hidden}
+.pv-rail li{opacity:.38;transition:opacity 300ms ease}
+.pv-rail li.is-on{opacity:1}
+.pv-rail li.is-on::before{content:'';display:inline-block;width:.42em;height:.42em;border-radius:50%;background:#c0230b;margin-right:.5em;vertical-align:.1em}
+@media (prefers-reduced-motion:reduce){.pv-rail li{transition:none}}

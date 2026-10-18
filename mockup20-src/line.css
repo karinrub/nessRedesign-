@@ -1,0 +1,31 @@
+/* 20 — the line (all type flat; the wire is the only 3D object) */
+.nw-gl{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;opacity:0}
+.nw-grain{position:absolute;inset:0;pointer-events:none;opacity:.045;background-size:180px 180px;mix-blend-mode:screen}
+.nw-hud{position:absolute;inset:0;pointer-events:none;font-family:'Instrument Sans',sans-serif;color:#e9e1ce;-webkit-font-smoothing:antialiased}
+.nw-blk{position:absolute;left:5vw;visibility:hidden;will-change:transform,opacity}
+.nw-h,.nw-name{font-weight:700;letter-spacing:-.055em;line-height:.9;color:#e9e1ce;white-space:nowrap;will-change:transform,opacity}
+.nw-h{display:block;font-size:8.6vw}
+.nw-h span{display:block}
+.nw-name{font-size:8.4vw;margin-bottom:.32em}
+.nw-p{width:min(31vw,460px);font-weight:400;font-size:clamp(17px,1.36vw,20px);line-height:1.5;letter-spacing:-.005em;color:#e9e1ce;text-wrap:pretty}
+.nw-blk--head{top:33vh}
+.nw-blk--web,.nw-blk--photo,.nw-blk--reb,.nw-blk--care{top:12vh}
+.nw-blk--care .nw-name{color:#c0230b}
+.nw-blk--end{top:auto;bottom:22vh}
+.nw-list{margin-top:1.6em;font-weight:500;font-size:clamp(17px,1.36vw,20px);line-height:1.4;color:#e9e1ce}
+
+/* the chapter rail: which stop the film is resting on */
+.nw-rail{position:absolute;right:5vw;bottom:6vh;display:flex;gap:1.6em;margin:0;padding:0;list-style:none;font-weight:500;font-size:15px;line-height:1;color:#e9e1ce;visibility:hidden}
+.nw-rail li{opacity:.38;transition:opacity 300ms ease}
+.nw-rail li.is-on{opacity:1}
+.nw-rail li.is-on::before{content:'';display:inline-block;width:.42em;height:.42em;border-radius:50%;background:#c0230b;margin-right:.5em;vertical-align:.1em}
+
+/* the last frame: the sentence is the link; the steel ring lands in .nw-stop as its full stop */
+.b-layer .nw-end{display:block;font-weight:700;font-size:5.4vw;letter-spacing:-.05em;line-height:1;color:#e9e1ce;text-decoration:none;white-space:nowrap;will-change:transform,opacity;transition:color 200ms ease}
+.nw-end>span{display:inline}
+.nw-stop{display:inline-block;width:6em;height:0;margin-left:.2em;vertical-align:baseline}
+@media (hover:hover) and (pointer:fine){.b-layer .nw-end:hover{color:#fff}}
+.b-layer .nw-mail{color:#e9e1ce;margin-left:1.2em;text-decoration:underline;text-decoration-color:#c0230b;text-decoration-thickness:.09em;text-underline-offset:.24em;transition:color 180ms ease}
+@media (hover:hover) and (pointer:fine){.b-layer .nw-mail:hover{color:#c0230b}}
+.nw-end:focus-visible,.nw-mail:focus-visible{outline:2px solid #c0230b;outline-offset:8px}
+@media (prefers-reduced-motion:reduce){.nw-rail li{transition:none}}
