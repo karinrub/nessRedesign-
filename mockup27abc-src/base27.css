@@ -1,0 +1,27 @@
+/* 27 — shared plumbing: the steel canvas, grain, the red field, the layer the type sits in */
+.d-gl{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;opacity:0}
+.d-grain{position:absolute;inset:0;pointer-events:none;opacity:.045;background-size:180px 180px;mix-blend-mode:screen}
+.k-red{position:absolute;inset:0;background:#c0230b;pointer-events:none;visibility:hidden;opacity:0}
+.d-hud{position:absolute;inset:0;pointer-events:none;font-family:'Instrument Sans',sans-serif;color:#e9e1ce;-webkit-font-smoothing:antialiased;visibility:hidden}
+.d-hud section,.d-hud p,.d-hud [id]{will-change:transform,opacity}
+.d-hud a{pointer-events:none}
+.d-hud .is-on a{pointer-events:auto}
+.d-hud a:focus-visible{outline:2px solid #c0230b;outline-offset:8px}
+/* 27 — the type system the three directions share: the heading, the centred hook, the reveal, "made for you", the end */
+.k-head{position:absolute;margin:0;font-weight:700;font-size:7.6vw;letter-spacing:-.055em;line-height:.9;visibility:hidden}
+.k-hook{position:absolute;inset:0;margin:auto;height:fit-content;text-align:center;visibility:hidden;text-wrap:balance}
+.k-hook--long{width:min(50vw,820px);font-weight:500;font-size:clamp(21px,1.85vw,34px);line-height:1.36;letter-spacing:-.012em}
+.k-hook--mid{width:min(60vw,1000px);font-weight:600;font-size:3.1vw;line-height:1.06;letter-spacing:-.035em}
+.k-hook--short{width:min(64vw,1100px);font-weight:600;font-size:4.3vw;line-height:1;letter-spacing:-.045em}
+.k-hook--care{font-size:6.2vw;width:80vw}
+.k-mf{white-space:nowrap}
+.k-rev{position:absolute;visibility:hidden}
+.k-nm{margin:0 0 .42em;font-weight:700;font-size:8.4vw;letter-spacing:-.06em;line-height:.86;white-space:nowrap}
+.k-rev p{margin:0;width:min(30vw,470px);font-size:clamp(18px,1.36vw,21px);line-height:1.5;letter-spacing:-.005em;text-wrap:pretty}
+.k-mfy{position:absolute;left:0;top:0;font-weight:600;letter-spacing:-.03em;line-height:1;white-space:nowrap;visibility:hidden;color:#e9e1ce}
+.k-end{position:absolute;visibility:hidden}
+.b-layer .k-cta{display:block;width:44vw;font-weight:700;font-size:6.6vw;letter-spacing:-.055em;line-height:.9;color:#e9e1ce;text-decoration:none;transition:color 200ms ease}
+@media (hover:hover) and (pointer:fine){.b-layer .k-end.is-on .k-cta:hover{color:#fff}}
+.k-mail{margin:1.1em 0 0;font-weight:500;font-size:clamp(18px,1.36vw,21px)}
+.b-layer .k-mail a{color:#e9e1ce;text-decoration:underline;text-decoration-color:#c0230b;text-decoration-thickness:.09em;text-underline-offset:.24em}
+.k-rev--web p{width:min(36vw,600px);font-weight:500;font-size:clamp(22px,2.05vw,36px);line-height:1.2;letter-spacing:-.02em}
